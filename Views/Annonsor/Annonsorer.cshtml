@@ -1,0 +1,95 @@
+﻿@model IEnumerable<AnnonsSystem.Models.AnnonsorModel>
+
+@{
+    ViewData["Title"] = "Annonsorer";
+}
+
+<h1>Annonsorer</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Typ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Namn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Organisationsnummer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefonnummer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Utdelningsadress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Postnummer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ort)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faktura_utdelningsadress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faktura_postnummer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faktura_ort)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Typ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Namn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Organisationsnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefonnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Utdelningsadress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Postnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Faktura_utdelningsadress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Faktura_postnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Faktura_ort)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
